@@ -1,0 +1,74 @@
+/* Подключение шрифтов */
+@font-face {
+  font-family: "Comfortaa-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/Comfortaa-Regular.woff2") format("woff2"), url("../assets/fonts/Comfortaa-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+/* Основные стили страницы */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: "Comfortaa-Regular", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.main {
+  width: 50%;
+  margin: 0 auto;
+
+}
+
+/* Игровое поле */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 5px;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/* Клетка */
+.cell {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border: 2px solid #333;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* кнопка новая игра */
+.reset-button {
+  display: block;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 0 auto;
+  border: 2px solid #333;
+}
+
+.result {
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 20px;
+}
+/* Подсветкф для выигрышных ячеек */
+.winning-cell {
+  background-color: #4caf50; 
+  color: white;
+}
